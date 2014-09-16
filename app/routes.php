@@ -24,7 +24,7 @@ Route::get('/tours/middle-of-the-world', array('as' => 'middle-of-the-world', 'u
 
 
 
-//Home Page
+//Pages
 Route::get('/', array('as' => 'home', 'uses' => 'PagesController@index'));
 Route::get('/about', array('as' => 'about', 'uses' => 'PagesController@about'));
 Route::get('/contact', array('as' => 'contact', 'uses' => 'PagesController@contact'));
