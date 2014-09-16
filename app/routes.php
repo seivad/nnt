@@ -31,7 +31,7 @@ Route::get('/contact', array('as' => 'contact', 'uses' => 'PagesController@conta
 Route::get('/tours', array('as' => 'tours', 'uses' => 'ToursController@index'));
 Route::get('/privacy', array('as' => 'privacy', 'uses' => 'PagesController@privacy'));
 Route::get('/terms-and-agreements', array('as' => 'terms', 'uses' => 'PagesController@terms'));
-Route::get('/thank-you', array('as' => 'thankyou', 'uses' => 'PagesController@thankyou'));
+Route::get('/thank-you', array('as' => 'thank-you', 'uses' => 'PagesController@thankyou'));
 
 
 
