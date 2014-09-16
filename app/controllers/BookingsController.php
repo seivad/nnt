@@ -73,9 +73,9 @@ class BookingsController extends \BaseController {
 	}
 
 
-	public function confirm($id) {
+	public function confirm($_id) {
 
-		$booking = Booking::find($id)->first();
+		$booking = Booking::find($_id);
 
 		return View::make('bookings.confirm', compact('booking'));
 
@@ -83,7 +83,7 @@ class BookingsController extends \BaseController {
 
 	public function complete() {
 
-		$booking = Booking::find(Input::get('payment_reference'))->first();
+		$booking = Booking::find(Input::get('payment_reference'));
 		$booking->receipt = Input::all();
 		$booking->save();
 
