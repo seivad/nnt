@@ -46,7 +46,7 @@ class PagesController extends \BaseController {
 
 			foreach($tour->dates as $date) {
 				if($date['id'] == $booking['tour_date']) {
-					$date['tour_date'] = $date['tour_date']--;
+					$date['tour_date']--;
 				}
 			}
 			$tour->touch();
