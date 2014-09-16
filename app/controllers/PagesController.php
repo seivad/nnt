@@ -42,10 +42,12 @@ class PagesController extends \BaseController {
 			$booking->receipt = Input::all();
 			$booking->save();
 
-			//540805fffa463466168b4567
-			$tour = Tour::where('id', '=', $booking['id'])->get();
+			dd($booking->id);
 
-			foreach($tour['dates'] as $date) {
+			//540805fffa463466168b4567
+			$tour = Tour::where('id', '=', $booking->id)->get();
+
+			foreach($tour->dates as $date) {
 				if($date['id'] == $booking['tour_date']) {
 					$date['tour_date'] = $date['tour_date']--;
 				}
