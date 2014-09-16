@@ -45,8 +45,12 @@ class PagesController extends \BaseController {
 			$tour = Tour::find($booking->id);
 
 			foreach($tour->dates as $date) {
-				if($date['id'] == $booking->tour_date) {
-					$date['spaces'] = $date['spaces']--;
+				if( $date['id'] == $booking->tour_date ) {
+					echo 'dateID and Tour Date match!';
+					if( $date['spaces'] > 0 ) {
+						echo 'Spaces is more than 0';
+						$date['spaces'] = $date['spaces']--;
+					}
 				}
 			}
 			$tour->touch();
