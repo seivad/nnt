@@ -1,0 +1,993 @@
+/**
+* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+font-family: sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+  background: none repeat scroll 0 0 #f5f5f5;
+  line-height: 1.75;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+  margin: 20px 0 0;
+  width: 100%;
+}
+th {
+  background: none repeat scroll 0 0 #f89a1f;
+  border: 1px solid #f5b35d;
+  color: #fff4e6;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 10px 8px;
+  text-align: center;
+  text-shadow: 0 2px 0 #905507;
+}
+tr {
+  border-bottom: 1px solid #666;
+}
+td {
+  background: none repeat scroll 0 0 #111;
+  border: 1px solid #666;
+  line-height: 1;
+  padding: 14px 8px;
+  text-align: center;
+}
+table a:link, table a:visited {
+    color: #272727;
+}
+table a:hover, table a:active {
+    color: #f08c09;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+*:focus {
+outline: none;
+} 
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+h1 {
+  font-size: 20px;
+  margin: 0 0 40px;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+}
+h2 {
+  color: #f89a1f;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 0 30px;
+}
+h3 {
+    font-size: 18px;
+    color: #272725;
+}
+h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+p {
+    margin-bottom: 25px;
+}
+strong {
+    font-weight: bold;
+}
+hr {
+  border-bottom: 1px dashed #ccc;
+  border-top: medium none;
+  clear: both;
+  margin: 20px 0;
+  outline: medium none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  border: none;
+}
+a, a:link, a:visited {
+    color: #f9a94a;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    color: #f08c09;
+}
+
+.half {
+    width: 100%;
+    float: left;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.full {
+    width: 100%;
+    float: left;
+    display: block;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: #ef3741;
+}
+
+tr.clickableRow { cursor: pointer; }
+
+
+tr.clickableRow:hover, 
+tr.clickableRow:active {
+    color: #f08c09; 
+}
+
+form {
+  margin: 40px 0;
+  width: 100%;
+}
+
+label {
+  float: left;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.gender label {
+    width: auto;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email], 
+select,
+textarea,
+input {
+
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    apperance: none;
+}
+
+@-moz-document url-prefix(){
+  select { width: 110%; overflow: hidden; }
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  width: 100%;
+  background: #f2f2f2;
+  border: 1px solid;
+  border-color: white #f7f7f7 #f5f5f5;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+.dropdown:before, .dropdown:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888 transparent;
+  pointer-events: none;
+}
+.dropdown:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+.dropdown:after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+.dropdown-select {
+  position: relative;
+  width: 130%;
+  margin: 0;
+  padding: 6px 8px 6px 10px;
+  height: 40px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #62717a;
+  text-shadow: 0 1px white;
+  /* Fallback for IE 8 */
+  background: #f2f2f2;
+  /* "transparent" doesn't work with Opera */
+  background: rgba(0, 0, 0, 0) !important;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.dropdown-select:focus {
+  z-index: 3;
+  width: 100%;
+  color: #394349;
+  outline: 2px solid #49aff2;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.dropdown-select > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Fix for IE 8 putting the arrows behind the select element. */
+.lt-ie9 .dropdown {
+  z-index: 1;
+}
+.lt-ie9 .dropdown-select {
+  z-index: -1;
+}
+.lt-ie9 .dropdown-select:focus {
+  z-index: 3;
+}
+
+/* Dirty fix for Firefox adding padding where it shouldn't. */
+@-moz-document url-prefix() {
+  .dropdown-select {
+    padding-left: 6px;
+  }
+}
+
+.dropdown-dark {
+  background: #444;
+  border-color: #111 #0a0a0a black;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.dropdown-dark:before {
+  border-bottom-color: #aaa;
+}
+.dropdown-dark:after {
+  border-top-color: #aaa;
+}
+.dropdown-dark .dropdown-select {
+  color: #aaa;
+  text-shadow: 0 1px black;
+  /* Fallback for IE 8 */
+  background: #444;
+}
+.dropdown-dark .dropdown-select:focus {
+  color: #ccc;
+}
+.dropdown-dark .dropdown-select > option {
+  background: #444;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.form input[type="radio"] {
+  height: auto;
+  margin: 5px;
+  padding: 0;
+  width: auto;
+}
+
+.pricing {
+    display: none;
+}
+
+.input {
+  display: inline-block;
+  margin: 0 0 15px;
+  width: 100%;
+}
+
+.form .input p {
+    margin-bottom: 0;
+}
+
+.form .input > input {
+  height: auto;
+  margin: 0;
+  padding: 12px;
+  width: 100%;
+}
+
+.input.has-error input {
+    border: 1px solid #e5858a;
+}
+
+.input .help-block {
+  clear: both;
+  color: #b12930;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.form .errors {
+  background: none repeat scroll 0 0 #f6cfd2;
+  border: 1px solid #e5858a;
+  clear: both;
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  padding: 12px;
+}
+
+.form .errors li {
+    color: #b12930;
+    list-style-type: none;
+}
+
+.button {
+  display: inline-block;
+  font-size: 16px;
+  height: auto;
+  margin: 8px 0;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button.grey {
+    width: auto;
+    background: #272727;
+    color: #FFFFFF;
+}
+
+.button.orange {
+    color: #FFFFFF;
+    border: 1px solid #eb9728;
+    text-shadow: 0 2px 0 #a06a24;
+    background: #f8a436; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f8a436 0%, #df8b1c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8a436), color-stop(100%,#df8b1c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f8a436 0%,#df8b1c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f8a436 0%,#df8b1c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f8a436 0%,#df8b1c 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f8a436 0%,#df8b1c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8a436', endColorstr='#df8b1c',GradientType=0 ); /* IE6-9 */
+}
+
+.button.blue {
+    color: #FFFFFF;    
+    border: 1px solid #166fad;
+    text-shadow: 0 2px 0 #1f5f8c;
+    background: #247cba; /* Old browsers */
+    background: -moz-linear-gradient(top,  #247cba 0%, #0a63a1 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#247cba), color-stop(100%,#0a63a1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #247cba 0%,#0a63a1 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #247cba 0%,#0a63a1 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #247cba 0%,#0a63a1 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #247cba 0%,#0a63a1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#247cba', endColorstr='#0a63a1',GradientType=0 ); /* IE6-9 */
+}
+
+.button.orange:hover {
+background: #e49021;
+}
+
+.button.blue:hover {
+background: #0e67a5;
+}
+
+.italics {
+  font-style: italic;
+  line-height: 1.3;
+  margin: 0;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#header {
+  background: url("../images/header/header.jpg") repeat-x scroll 0 0 #171717;
+  height: 100%;
+  min-height: 203px;
+  width: 100%;
+}
+
+#header .callnow {
+  margin-bottom: 20px;
+  position: relative;
+  right: 0;
+  text-align: center;
+  top: 0;
+}
+
+#header .callnow h3 {
+  color: #ffffff;
+  font-size: 28px;
+  margin: 0;
+  text-shadow: 0 3px 0 #272727;
+}
+
+#header .callnow h4 {
+  color: #ffffff;
+  margin: 0 0 5px;
+  text-shadow: 0 3px 0 #272727;  
+}
+
+#header a.brandlogo {
+  background: url("../images/header/header-logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: 0 none;
+  color: transparent;
+  display: block;
+  font: 0px/0 a;
+  height: 110px;
+  margin: 0 auto;
+  position: relative;
+  text-shadow: none;
+  width: 80px;
+}
+
+#header a.middleoftheworldlogo {
+  background: url("../images/tour-logos/middle-of-the-world.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: 0 none;
+  color: transparent;
+  display: block;
+  font: 0px/0 a;
+  height: 74px;
+  margin: 20px auto;
+  position: relative;
+  text-shadow: none;
+  width: 207px;
+}
+
+#header .logo {
+  background: url("../images/tours/middle-of-the-world/logo.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  height: 341px;
+  width: 308px;    
+  border: 0 none;
+  color: transparent;
+  display: block;
+  font: 0px/0 a;
+  margin: 0 auto 40px;
+  max-width: 100%;
+  position: relative;
+  text-shadow: none;
+  top: 20px;
+  z-index: 9999;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto 0;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.container .content {
+    padding: 20px;
+}
+
+.content {
+  display: block;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
+  z-index: 100;
+}
+
+#navigation {
+  display: inline-block;
+  float: none;
+  height: auto;
+  left: 0;
+  margin: 0 auto 15px;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+#navigation > ul {
+  text-align: center;
+}
+
+#navigation ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+#navigation ul li a:link, #navigation ul li a:visited {
+  color: #cccccc;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 2px 0 #171717;
+}
+
+#navigation ul li a:hover, #navigation ul li a:active {
+    color: #FFFFFF;
+}
+
+.main {
+  background: #FFFFFF;
+  float: left;
+  padding: 20px;
+  width: 100%;
+}
+
+.tour-logo {
+  display: block;
+  margin: 0 auto 30px;
+  max-width: 100%;
+}
+
+.sidebar {
+    width: 100%;
+    float: left;
+}
+.sidebar h3 {
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.sidebar strong {
+    color: #FFFFFF;
+}
+.sidebar .info {
+  background: url("../images/sidebar/info.jpg") repeat scroll 0 0 #333333;
+  color: #e2e2e2;
+  padding: 20px;
+}
+
+.sidebar .reviews {
+    background: url("../images/sidebar/reviews.jpg") repeat scroll 0 0 #333333;
+    color: #FFFFFF;
+    padding: 20px;
+    border-top: 1px dashed #666666;
+}
+
+.sidebar .reviews span.reviewer {
+    color: #c8c8c8;
+}
+
+.sidebar .map {
+  overflow: hidden;
+  border-top: 1px dashed #666;
+}
+
+.sidebar .map img {
+    width: 100%;
+}
+
+.sidebar .quicklinks {
+    padding: 20px;
+}
+
+.sidebar .quicklinks ul li {
+  float: left;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  max-width: 130px;
+  padding-top: 5px;
+}
+
+.sidebar .quicklinks ul li .fa {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-top: -7px;
+}
+
+.sidebar table a:link, .sidebar table a:visited {
+    color: #FFFFFF;
+}
+
+.sidebar table a:hover, .sidebar table a:active {
+    color: #f08c09;
+}
+
+#footer {
+  background: url("../images/footer/footer.jpg") repeat scroll 0 0 #272725;
+  display: inline-block;
+  height: 100%;
+  min-height: 250px;
+  width: 100%;
+}
+
+#footer .content {
+  padding: 20px;
+}
+
+.footerlogo {
+  background: url("../images/header/header-logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: 0 none;
+  clear: both;
+  display: block;
+  float: none;
+  font: 0px/0 a;
+  height: 110px;
+  margin: 0 auto 0;
+  position: relative;
+  text-shadow: none;
+  width: 80px;
+}
+
+#footer h3 {
+    color: #FFFFFF;
+}
+
+#footer .quicklinks h3 {
+    margin-bottom: 0;
+}
+
+#footer .quicklinks a {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#footer .linkgroup {
+  display: inline-block;
+  float: none;
+  margin: 20px auto;
+  text-align: center;
+  width: 100%;
+}
+
+#footer ul.links {
+  display: inline-block;
+}
+
+#footer a:link, #footer a:visited {
+    text-decoration: none;
+    color: #aeaeae;
+}
+
+#footer a:hover, #footer a:active {
+    color: #FFFFFF;
+}
+
+#copyright {
+    width: 100%;
+}
+
+#copyright .content {
+    padding: 0 20px;
+}
+
+#copyright p {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#copyright, #copyright a:link, #copyright a:visited {
+  color: #aaaaaa;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+#copyright a:hover, #copyright a:active {
+    color: #333333;
+}
+
+.gallery img {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.gallery img:last-child {
+    margin-bottom: 0;
+}
+
+#bookings {
+    display: none;
+    margin-top: 30px;
+}
+
+ul.itinerary li {
+    margin-bottom: 20px;
+}
+
+ul.socialmedia {
+  display: inline-block;
+  margin: 0 auto 20px;
+  position: relative;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+ul.socialmedia li {
+  display: inline;
+  margin-right: 10px;
+}
+
+ul.socialmedia li a:link, ul.socialmedia li a:visited {
+    color: #cccccc;
+      text-shadow: 0 2px 0 #171717;
+}
+
+ul.socialmedia li a:hover, ul.socialmedia li a:active {
+    color: #FFFFFF;
+}
+
+.quicklinks ul li a:link, .quicklinks ul li a:visited {
+    color: #272727;
+}
+
+.quicklinks ul li a:hover, .quicklinks ul li a:active {
+    color: #f89a1f;
+}
+
+.star-rating {
+  margin-bottom: 4px;
+  text-align: right;
+  width: 100%;
+}
+
+.star-rating .fa-star {
+  color: #f89a1f;
+}
+
+@media screen and (min-width:769px) {
+
+    .dropdown {
+        width: auto;
+        min-width: 100px;
+    }
+
+    .half {
+        width: 48%;
+        float: left;
+        display: block;
+        margin-right: 4%;
+    }
+
+    .half_last {
+        margin-right: 0;
+    }
+
+    h1 {
+      font-size: 28px;
+      text-align: left;
+    }
+    .container {
+      display: block;
+      margin: 0 auto 60px;
+    }
+
+    .container .content {
+      padding: 0 30px;
+    }
+
+    #header {
+        background-color: transparent;
+        padding-bottom: 0;
+    }
+
+
+    #header a.brandlogo {
+      left: 360px;
+      margin: 0;
+      position: absolute;
+      top: 18px;
+    }
+
+    #header .logo {
+      display: block;
+      height: 341px;
+      position: absolute;
+      top: 20px;
+      width: 308px;
+      z-index: 9999;
+      margin: 0;
+    }
+
+    #header .callnow, ul.socialmedia {display: none;}
+
+    ul.socialmedia li a:link, ul.socialmedia li a:visited {
+        color: #d68f8f;
+        text-shadow: 0 2px 0 #171717;
+    }
+
+    #navigation {
+      display: block;
+      float: left;
+      left: 346px;
+      position: relative;
+      top: 160px;
+      width: auto;
+    }
+
+    #navigation > ul {
+      text-align: left;
+    }
+
+    #navigation ul li a:link, #navigation ul li a:visited {
+        color: #d68f8f;
+    }
+
+    #navigation ul li a:hover, #navigation ul li a:active {
+        color: #FFFFFF;
+    }
+
+    .content {
+      padding: 0 20px;
+    }
+
+    .content.inner {
+      margin-top: 180px;
+    }
+      
+    .main {
+      border: 1px solid #ccc;
+      margin-right: 7%;
+      margin-top: 300px;
+      padding: 30px;
+      width: 60%;
+    }
+    .sidebar {
+      width: 33%;
+      margin-top: 300px;
+    }
+
+    .sidebar .reviews, .sidebar .map, .sidebar .quicklinks{
+        margin-top: 30px;
+        border: none;
+    }
+
+    .sidebar .map {
+        border: 1px solid #8b8b8b;
+    }
+
+    #header a.middleoftheworldlogo {
+      left: 500px;
+      margin: 0;
+      position: absolute;
+      top: 35px;
+    }
+
+}
+
+
+
+@media screen and (min-width:1100px) {
+
+    .content {
+        width: 1120px;
+        padding: 0 20px;
+    }
+
+    .main, .sidebar {
+        margin-top: 500px;
+    }
+
+    #header .callnow {
+      position: absolute;
+      right: 20px;
+      text-align: right;
+      top: 50px;
+      display: inline-block;
+    }
+
+        ul.socialmedia {
+      margin: 0;
+      position: absolute;
+      right: 20px;
+      text-align: left;
+      top: 158px;
+      width: auto;
+      display: inline-block;
+    }
+
+    .footerlogo {
+      display: inline-block;
+      float: left;
+      margin: 70px 0 0;
+    }
+
+    #footer .content {
+      padding: 0;
+    }
+
+    #footer .linkgroup {
+        margin: 50px 0 0 80px;
+        float: left;
+        width: auto;
+        text-align: left;
+    }
+
+
+
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (min--moz-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    
+    #header .logo {
+      background: url("../images/tours/middle-of-the-world/logo@2x.png") repeat scroll 0 0 / 308px 341px rgba(0, 0, 0, 0);
+    }
+
+    .footerlogo, #header a.brandlogo {
+      background: url("../images/header/header-logo@2x.png") no-repeat scroll 0 0 / 80px 110px rgba(0, 0, 0, 0);
+    }
+
+}
+
+
+
+
+
+
+

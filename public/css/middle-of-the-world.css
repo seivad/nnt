@@ -1,0 +1,27 @@
+
+.footergraphic {
+display: none;
+}
+
+
+@media screen and (min-width:769px) {
+
+	.middle-of-the-world {
+	  background: url("../images/tours/middle-of-the-world/feature.jpg") no-repeat scroll center top / contain #f5f5f5;
+	  min-height: 1240px;
+	  width: 100%;
+	}
+
+	.footergraphic {
+	  background: url("../images/tours/middle-of-the-world/footer.jpg") no-repeat scroll 0 0 / cover  rgba(0, 0, 0, 0);
+	  border: medium none;
+	  bottom: -60px;
+	  display: block;
+	  height: 465px;
+	  position: absolute;
+	  width: 100%;
+	  z-index: 1;
+	}
+
+
+}
