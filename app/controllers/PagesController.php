@@ -45,7 +45,7 @@ class PagesController extends \BaseController {
 			//540805fffa463466168b4567
 			$tour = Tour::find($booking->id);
 
-			dd($tour);
+			dd($tour->dates);
 
 			/*foreach($tour->dates as $date) {
 				if($date['id'] == $booking['tour_date']) {
