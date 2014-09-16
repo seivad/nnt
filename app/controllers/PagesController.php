@@ -43,7 +43,7 @@ class PagesController extends \BaseController {
 			$booking->save();
 
 			//540805fffa463466168b4567
-			$tour = Tour::where('id', '=', $booking->id)->get();
+			$tour = Tour::find($booking->id);
 
 			dd($tour);
 
