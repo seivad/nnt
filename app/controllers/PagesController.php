@@ -41,6 +41,18 @@ class PagesController extends \BaseController {
 			$booking = Booking::find(Input::get('payment_reference'));
 			$booking->receipt = Input::all();
 			$booking->save();
+
+			//540805fffa463466168b4567
+			$tour = Tour::where('id', '=', $booking->id)->get();
+
+			foreach($tour->dates as $date) {
+				if($date['id'] == $booking['tour_date']) {
+					$date['tour_date'] = $date['tour_date']--;
+				}
+			}
+			$tour->touch();
+			$tour->save();
+			
 		}
 
 		return View::make('pages.thankyou');
