@@ -43,7 +43,7 @@
 			<input type="hidden" name="gst_rate" value="10" />
 
 			<input type="hidden" name="return_link_text" value="Complete Your Booking and Return Back To Not Normal Tours" />
-			<input type="hidden" name="return_link_url" value="{{ URL::to('/thank-you') }}/bookings/complete?booking_id={{ $booking['_id'] }}&amp;payment_reference=&amp;bank_reference=&amp;payment_amount=&amp;payment_date=&amp;payment_number=&amp;card_type=&amp;remote_ip=" />
+			<input type="hidden" name="return_link_url" value="{{ URL::to('/thank-you') }}?booking_id={{ $booking['_id'] }}&amp;payment_reference=&amp;bank_reference=&amp;payment_amount=&amp;payment_date=&amp;payment_number=&amp;card_type=&amp;remote_ip=" />
 
 			<input type="hidden" name="reply_link_url" value="{{ URL::to('/') }}/bookings/complete?booking_id={{ $booking['_id'] }}&amp;payment_reference=&amp;bank_reference=&amp;payment_amount=&amp;payment_date=&amp;payment_number=&amp;card_type=&amp;remote_ip=" />
 
