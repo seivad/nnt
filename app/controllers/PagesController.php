@@ -35,10 +35,13 @@ class PagesController extends \BaseController {
 
 	public function thankyou()
 	{
+
+		dd(Input::all());
+
 		if(Input::get('payment_reference'))
 		{
 			$booking = Booking::find(Input::get('payment_reference'))->first();
-			$booking->payment = Input::all();
+			$booking->receipt = Input::all();
 			$booking->save();
 		}
 

@@ -84,7 +84,7 @@ class BookingsController extends \BaseController {
 	public function complete() {
 
 		$booking = Booking::find(Input::get('payment_reference'))->first();
-		$booking->payment = Input::all();
+		$booking->receipt = Input::all();
 		$booking->save();
 
 		return true;
