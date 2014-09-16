@@ -45,7 +45,7 @@ class PagesController extends \BaseController {
 			dd($booking->id);
 
 			//540805fffa463466168b4567
-			$tour = Tour::where('id', '=', $booking->id)->get();
+			/*$tour = Tour::where('id', '=', $booking->id)->get();
 
 			foreach($tour->dates as $date) {
 				if($date['id'] == $booking['tour_date']) {
@@ -53,7 +53,7 @@ class PagesController extends \BaseController {
 				}
 			}
 			$tour->touch();
-			$tour->save();
+			$tour->save();*/
 			
 		}
 
