@@ -49,7 +49,7 @@ class PagesController extends \BaseController {
 					echo 'dateID and Tour Date match!';
 					if( $date['spaces'] > 0 ) {
 						echo 'Spaces is more than 0';
-						$date['spaces'] = $date['spaces']--;
+						$date['spaces'] = $date['spaces'] - 1;
 					}
 				}
 			}
