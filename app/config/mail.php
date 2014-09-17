@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'email-smtp.us-west-2.amazonaws.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'mick@5150studios.com.au', 'name' => 'Not Normal Tours'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => 'AKIAJZYUQ5J6QCQ6Q4BQ',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => 'AgZRkL4l7OVRVa6q62Qsd4qmQi3CB5OWsdEg3gKVQvEA',
 
 	/*
 	|--------------------------------------------------------------------------

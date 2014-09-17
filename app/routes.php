@@ -34,6 +34,28 @@ Route::get('/terms-and-agreements', array('as' => 'terms', 'uses' => 'PagesContr
 Route::get('/thank-you', array('as' => 'thank-you', 'uses' => 'PagesController@thankyou'));
 
 
+Route::get('/email', function() {
+
+	$booking = Booking::find('541838f7fa4634e1078aa7b8');
+	$tour = Tour::find($booking->id);
+
+	Mail::send('emails.booking', compact('booking', 'tour'), function($message) use ($booking)
+	{
+	    $message->to($booking->email, $booking->first_name . ' ' . $booking->last_name)->subject('New Booking at Not Normal Tours');
+	});
+
+	return 'email sent';
+});
+
+Route::get('/email/view', array(function() {
+
+	$booking = Booking::find('541838f7fa4634e1078aa7b8');
+	$tour = Tour::find($booking->id);
+
+	return View::make('emails.booking', compact('booking', 'tour'));
+}));
+
+
 
 /*Route::get('/', array('as' => 'home', function()
 {

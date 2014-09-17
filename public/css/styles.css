@@ -775,7 +775,7 @@ ul.socialmedia li {
 
 ul.socialmedia li a:link, ul.socialmedia li a:visited {
     color: #cccccc;
-      text-shadow: 0 2px 0 #171717;
+    text-shadow: 0 2px 0 #171717;
 }
 
 ul.socialmedia li a:hover, ul.socialmedia li a:active {
@@ -859,6 +859,10 @@ ul.socialmedia li a:hover, ul.socialmedia li a:active {
     ul.socialmedia li a:link, ul.socialmedia li a:visited {
         color: #d68f8f;
         text-shadow: 0 2px 0 #171717;
+    }
+
+    ul.socialmedia li a:hover, ul.socialmedia li a:active {
+        color: #FFFFFF;
     }
 
     #navigation {
