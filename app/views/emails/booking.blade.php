@@ -10,7 +10,7 @@
 	<strong>Email Address:</strong> {{ $booking->email }}<br />
 	<strong>Phone Number:</strong> {{ $booking->phone }}<br />
 	<strong>Gender:</strong> {{ $booking->gender }}<br />
-	<strong>DOB:</strong> {{ $booking->day }}/{{ $booking->month }}/{{ $booking->year }}<br />
+	<strong>DOB:</strong> {{ Carbon::createFromDate($booking->year, $booking->month, $booking->day)->toFormattedDateString() }}<br />
 	<strong>Address:</strong><br />
 		{{ $booking->street_address }},<br />
 		{{ $booking->suburb }}, {{ $booking->state }},<br />
