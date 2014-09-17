@@ -65,8 +65,9 @@ class PagesController extends \BaseController {
 				}
 			}*/
 			//$tour->save();
+			$tour = Tour::find($booking->id);
 
-			Mail::send('emails.booking', array('key' => 'value'), function($message)
+			Mail::send('emails.booking', compact('booking', 'tour'), function($message) use ($booking)
 			{
 			    $message->to($booking->email, $booking->first_name . ' ' . $booking->last_name)->subject('New Booking at Not Normal Tours');
 			});
