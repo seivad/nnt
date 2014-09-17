@@ -56,6 +56,18 @@ Route::get('/email/view', array(function() {
 }));
 
 
+Route::get('/test', function() {
+
+			$booking = Booking::find('541838f7fa4634e1078aa7b8');
+
+			$tour = Tour::where('dates.id', 572541906)->decrement('dates.$.spaces');
+
+			return 'woo!';
+
+});
+
+
+
 
 /*Route::get('/', array('as' => 'home', function()
 {
