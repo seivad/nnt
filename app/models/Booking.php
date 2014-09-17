@@ -13,9 +13,6 @@ class Booking extends Eloquent {
 
 	protected $collection = 'bookings';
 
-	protected $connection = 'mongodb';
-
-
 	public static $rules = array(
 		'captcha' => 'required|captcha',
 		'title' => 'required',
