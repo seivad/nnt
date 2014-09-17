@@ -6,5 +6,5 @@ class Tour extends Eloquent {
 
 	protected $collection = 'tours';
 
-	protected $fillable = [];
+	protected $guarded = [];
 }
