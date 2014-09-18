@@ -36,7 +36,7 @@
 
 		<div class="linkgroup quicklinks">
 			<h3>Connect With Us</h3>
-			<a href="tel:1300 669 664">1300 669 664</a>
+			<a href="tel:1300669664">1300 669 664</a>
 
 			<h3>Email</h3>
 			<a href="{{ route('contact') }}">Quick Inquiry</a>
