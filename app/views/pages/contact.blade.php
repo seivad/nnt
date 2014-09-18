@@ -32,21 +32,25 @@
 					<div class="input @if ($errors->has('name')) has-error @endif">
 						{{ Form::label('name', 'Full Name') }}
 						{{ Form::text('name') }}
+						@if ($errors->has('name')) <p class="help-block">{{ $errors->first('name') }}</p>@endif
 					</div>
 
 					<div class="input @if ($errors->has('phone')) has-error @endif">
 						{{ Form::label('phone', 'Phone Number') }}
 						{{ Form::text('phone') }}
+						@if ($errors->has('phone')) <p class="help-block">{{ $errors->first('phone') }}</p>@endif
 					</div>
 
 					<div class="input @if ($errors->has('email')) has-error @endif">
 						{{ Form::label('email', 'Email Address') }}
 						{{ Form::email('email') }}
+						@if ($errors->has('email')) <p class="help-block">{{ $errors->first('email') }}</p>@endif
 					</div>
 
 					<div class="input @if ($errors->has('message')) has-error @endif">
 						{{ Form::label('message', 'Comment / Message') }}
 						{{ Form::textarea('message') }}
+						@if ($errors->has('message')) <p class="help-block">{{ $errors->first('message') }}</p>@endif
 					</div>
 
 					<div class="input @if ($errors->has('captcha')) has-error @endif">

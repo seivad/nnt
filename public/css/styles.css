@@ -217,6 +217,14 @@ select::-ms-expand {
     display: none;
 }
 
+.alert.alert-success {
+  background: none repeat scroll 0 0 #85c16e;
+  border: 1px solid #599542;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
 .dropdown {
   display: inline-block;
   position: relative;

@@ -29,7 +29,8 @@ class PagesController extends \BaseController {
 			'captcha' => 'required|captcha',
 		    'name' => 'required',
 		    'email' => 'required|email',
-		    'phone' => 'required'
+		    'phone' => 'required',
+		    'message' => 'required'
 		);
 
 		$messages = array(
