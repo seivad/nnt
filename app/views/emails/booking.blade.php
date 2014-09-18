@@ -1,6 +1,6 @@
 <h1>New Booking</h1>
 
-<h3>{{ $booking['tour_name'] }}</h3>
+<h3>{{ $booking->tour_name }}</h3>
 <h4>Total Price: ${{ number_format(($booking->price / 100),2) }} | NAB Payment: ${{ number_format($booking->receipt['payment_amount'],2) }}</h4>
 
 <h2>Booking Info</h2>
