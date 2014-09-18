@@ -31,12 +31,6 @@ Route::get('/privacy', array('as' => 'privacy', 'uses' => 'PagesController@priva
 Route::get('/terms-and-agreements', array('as' => 'terms', 'uses' => 'PagesController@terms'));
 Route::get('/thank-you', array('as' => 'thank-you', 'uses' => 'PagesController@thankyou'));
 
-Route::get('/test', function() {
-	$var = 1354906891;
-	$tour = Tour::where('dates.id', $var)->increment('dates.$.spaces');
-	return 'true';
-});
-
 App::missing(function($exception)
 {
     return Response::view('pages.404', array(), 404);

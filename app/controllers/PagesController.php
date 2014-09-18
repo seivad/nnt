@@ -27,10 +27,10 @@ class PagesController extends \BaseController {
 
 		$rules = array(
 			'captcha' => 'required|captcha',
-		    'name' => 'required',
-		    'email' => 'required|email',
-		    'phone' => 'required',
-		    'message' => 'required'
+			'name' => 'required',
+			'email' => 'required|email',
+			'phone' => 'required',
+			'message' => 'required'
 		);
 
 		$messages = array(
@@ -76,13 +76,13 @@ class PagesController extends \BaseController {
 			$booking->save();
 
 			$tour = Tour::find($booking->id);
+			$tour = Tour::where('dates.id', (int) $booking->tour_date)->decrement('dates.$.spaces');
 
 			Mail::queue('emails.booking', compact('booking', 'tour'), function($message)
 			{
 			    $message->to('mick@5150studios.com.au', 'Not Normal Tours')->subject('New Booking at Not Normal Tours');
 			});
 
-			$tour = Tour::where('dates.id', $booking->tour_date)->decrement('dates.$.spaces');
 			
 
 			return View::make('pages.thankyou');
