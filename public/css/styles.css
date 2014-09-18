@@ -937,6 +937,7 @@ ul.socialmedia li a:hover, ul.socialmedia li a:active {
 
     .button {
         width: auto;
+        min-width: 180px;
         padding: 12px 16px;
     }
 
