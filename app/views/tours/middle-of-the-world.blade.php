@@ -230,9 +230,9 @@
 
 			<div class="quicklinks">
 				<ul>
-					<li><a href="#"><i class="fa fa-2x fa-phone"></i> Request A Callback</a></li>
-					<li><a href="#"><i class="fa fa-2x fa-paper-plane"></i> Travel Map</a></li>
-					<li><a href="#"><i class="fa fa-2x fa-comments"></i> Questions?</a></li>
+					<li><a href="{{ route('contact') }}"><i class="fa fa-2x fa-phone"></i> Request A Callback</a></li>
+					<li><a href="{{ route('contact') }}"><i class="fa fa-2x fa-paper-plane"></i> Travel Map</a></li>
+					<li><a href="{{ route('contact') }}"><i class="fa fa-2x fa-comments"></i> Questions?</a></li>
 				</ul>
 			</div><!-- /quicklinks -->
 
