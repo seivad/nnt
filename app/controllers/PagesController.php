@@ -46,7 +46,7 @@ class PagesController extends \BaseController {
 		   return Redirect::route('contact')->withErrors($validator)->withInput(Input::except('captcha'));
 		}
 
-		Mail::later(5, 'emails.inquiry', compact('input'), function($message)
+		Mail::send('emails.inquiry', compact('input'), function($message)
 		{
 		    $message->to('mick@5150studios.com.au', 'Not Normal Tours')->subject('Not Normal Tours Inquiry Form Submission');
 		});
@@ -78,7 +78,7 @@ class PagesController extends \BaseController {
 			$tour = Tour::where('dates.id', $booking->tour_date)->decrement('dates.$.spaces');
 			$tour = Tour::find($booking->id);
 
-			Mail::later(5, 'emails.booking', compact('booking', 'tour'), function($message) use ($booking)
+			Mail::send('emails.booking', compact('booking', 'tour'), function($message) use ($booking)
 			{
 			    $message->to($booking->email, $booking->first_name . ' ' . $booking->last_name)->subject('New Booking at Not Normal Tours');
 			});
