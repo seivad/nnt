@@ -13,7 +13,6 @@
 
 
 //Booking A Tour Page
-//Route::get('/bookings', array('uses' => 'BookingsController@index'));
 Route::get('/bookings/complete', array('uses' => 'BookingsController@complete'));
 Route::get('/bookings/confirm/{id?}', array('as' => 'bookings.confirm', 'uses' => 'BookingsController@confirm'));
 Route::get('/bookings/{id?}/{tourid?}', array('as' => 'bookings', 'uses' => 'BookingsController@index'));
@@ -21,8 +20,6 @@ Route::post('/bookings', array('as' => 'bookings.store', 'before' => 'csrf', 'us
 
 //Middle Of The World Tour Page
 Route::get('/tours/middle-of-the-world', array('as' => 'middle-of-the-world', 'uses' => 'ToursController@middleOfTheWorld'));
-
-
 
 //Pages
 Route::get('/', array('as' => 'home', 'uses' => 'PagesController@index'));
@@ -35,38 +32,10 @@ Route::get('/terms-and-agreements', array('as' => 'terms', 'uses' => 'PagesContr
 Route::get('/thank-you', array('as' => 'thank-you', 'uses' => 'PagesController@thankyou'));
 
 
-Route::get('/email', function() {
-
-	$booking = Booking::find('541838f7fa4634e1078aa7b8');
-	$tour = Tour::find($booking->id);
-
-	Mail::send('emails.booking', compact('booking', 'tour'), function($message) use ($booking)
-	{
-	    $message->to($booking->email, $booking->first_name . ' ' . $booking->last_name)->subject('New Booking at Not Normal Tours');
-	});
-
-	return 'email sent';
+App::missing(function($exception)
+{
+    return Response::view('pages.404', array(), 404);
 });
-
-Route::get('/email/view', array(function() {
-
-	$booking = Booking::find('541838f7fa4634e1078aa7b8');
-	$tour = Tour::find($booking->id);
-
-	return View::make('emails.booking', compact('booking', 'tour'));
-}));
-
-
-Route::get('/test', function() {
-
-			/*$booking = Booking::find('541838f7fa4634e1078aa7b8');
-
-			$tour = Tour::where('dates.id', 572541906)->decrement('dates.$.spaces');*/
-
-			return 'woo!';
-
-});
-
 
 
 
