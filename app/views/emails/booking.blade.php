@@ -22,7 +22,7 @@
 
 <h2>Tour Info</h2>
 
-@foreach($tour->dates as $date)
+@forelse($tour->dates as $date)
 
 	@if($booking->tour_date == $date['id'])
 
@@ -35,4 +35,6 @@
 
 	@endif
 
-@endforeach
+@empty
+
+@endforelse
