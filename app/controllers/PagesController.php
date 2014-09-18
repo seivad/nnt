@@ -75,17 +75,22 @@ class PagesController extends \BaseController {
 			$booking->receipt = Input::all();
 			$booking->save();
 
-			$tour = Tour::where('dates.id', $booking->tour_date)->decrement('dates.$.spaces');
 			$tour = Tour::find($booking->id);
 
 			Mail::queue('emails.booking', compact('booking', 'tour'), function($message)
 			{
 			    $message->to('mick@5150studios.com.au', 'Not Normal Tours')->subject('New Booking at Not Normal Tours');
 			});
+
+			$tour = Tour::where('dates.id', $booking->tour_date)->decrement('dates.$.spaces');
+
+			return View::make('pages.thankyou');
 			
 		}
 
-		return View::make('pages.thankyou');
+		return Redirect::to('/');
+
+		
 	}		
 
 }
