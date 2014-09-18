@@ -78,7 +78,7 @@ class PagesController extends \BaseController {
 			$tour = Tour::find($booking->id);
 			$tour = Tour::where('dates.id', (int) $booking->tour_date)->decrement('dates.$.spaces');
 
-			Mail::queue('emails.booking', compact('booking', 'tour'), function($message)
+			Mail::send('emails.booking', compact('booking', 'tour'), function($message)
 			{
 			    $message->to('mick@5150studios.com.au', 'Not Normal Tours')->subject('New Booking at Not Normal Tours');
 			});
