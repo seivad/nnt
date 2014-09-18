@@ -33,7 +33,7 @@ Route::get('/thank-you', array('as' => 'thank-you', 'uses' => 'PagesController@t
 
 Route::get('/test', function() {
 	$var = 1354906891;
-	$tour = Tour::where('dates.id', $var)->decrement('dates.$.spaces');
+	$tour = Tour::where('dates.id', $var)->increment('dates.$.spaces');
 	return 'true';
 });
 
