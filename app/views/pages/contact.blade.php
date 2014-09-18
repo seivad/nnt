@@ -40,7 +40,7 @@
 					</div>
 
 					<div class="input @if ($errors->has('email')) has-error @endif">
-						{{ Form::label('name', 'Full Name') }}
+						{{ Form::label('email', 'Email Address') }}
 						{{ Form::email('email') }}
 					</div>
 
