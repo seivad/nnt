@@ -85,7 +85,7 @@
 				<p><strong>Terms &amp; Conditions:</strong> To secure your booking a deposit of $250 dollars has to be paid at the time of booking. The remainding amount has to be paid 2 weeks prior to the departure day.</p>
 
 				<a href="#" class="button orange" id="booknow">Book Now</a>
-				<a href="#" class="button blue" id="booking-request">Booking Request</a>
+				<a href="{{ route('contact') }}" class="button blue" id="booking-request">Booking Request</a>
 
 				<script>
 					$(document).ready(function() {
