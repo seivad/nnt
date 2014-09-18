@@ -39,10 +39,10 @@
 			<a href="tel:1300 669 664">1300 669 664</a>
 
 			<h3>Email</h3>
-			<a href="#">Quick Inquiry</a>
+			<a href="{{ route('contact') }}">Quick Inquiry</a>
 
 			<h3>Socialmedia</h3>
-			<a href="#">Like Us</a>
+			<a href="{{ route('contact') }}">Like Us</a>
 		</div>
 
 	</div><!-- /content -->

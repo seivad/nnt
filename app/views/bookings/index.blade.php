@@ -167,7 +167,7 @@
 
 				<div class="input @if ($errors->has('terms')) has-error @endif">
 					<label for="terms">
-						{{ Form::checkbox('terms', 'I agree to the terms and conditions', false, array('id' => 'terms')) }} Yes, I agree to the <a href="#">Terms &amp; Conditions</a>
+						{{ Form::checkbox('terms', 'I agree to the terms and conditions', false, array('id' => 'terms')) }} Yes, I agree to the <a href="{{ route('terms') }}">Terms &amp; Conditions</a>
 					</label>
 					@if ($errors->has('terms')) <p class="help-block">{{ $errors->first('terms') }}</p>@endif
 				</div>
