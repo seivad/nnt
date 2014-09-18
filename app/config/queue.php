@@ -43,10 +43,10 @@ return array(
 
 		'sqs' => array(
 			'driver' => 'sqs',
-			'key'    => 'your-public-key',
-			'secret' => 'your-secret-key',
-			'queue'  => 'your-queue-url',
-			'region' => 'us-east-1',
+			'key'    => 'AKIAIXVRN2BL2OQAH7GA',
+			'secret' => '3my3x4mqLjqqYT/P4voSewIs48cVG4gPHA1afGMW ',
+			'queue'  => 'https://sqs.ap-southeast-2.amazonaws.com/195571452128/NotNormalTours-Emails',
+			'region' => 'ap-southeast-2',
 		),
 
 		'iron' => array(
