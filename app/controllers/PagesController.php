@@ -90,7 +90,6 @@ class PagesController extends \BaseController {
 		}
 
 		return Redirect::to('/');
-
 		
 	}		
 
