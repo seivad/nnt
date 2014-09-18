@@ -32,7 +32,7 @@ Route::get('/terms-and-agreements', array('as' => 'terms', 'uses' => 'PagesContr
 Route::get('/thank-you', array('as' => 'thank-you', 'uses' => 'PagesController@thankyou'));
 
 Route::get('/test', function() {
-	$tour = Tour::where('dates.id', 572541906)->increment('dates.$.spaces');
+	$tour = Tour::where('dates.id', 572541906)->decrement('dates.$.spaces');
 	return 'true';
 });
 
