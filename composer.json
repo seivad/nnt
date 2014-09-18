@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"jenssegers/mongodb": "*",
-		"mews/captcha": "dev-master"
+		"mews/captcha": "dev-master",
+		"aws/aws-sdk-php": "*"
 	},
 		"require-dev": {
     	"way/generators": "~2.0"
