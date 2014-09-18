@@ -75,7 +75,7 @@ class PagesController extends \BaseController {
 			$booking->receipt = Input::all();
 			$booking->save();
 
-			$tour = Tour::where('dates.id', 572541906)->decrement('dates.$.spaces');
+			$tour = Tour::where('dates.id', $booking->tour_date)->decrement('dates.$.spaces');
 			$tour = Tour::find($booking->id);
 
 			Mail::send('emails.booking', compact('booking', 'tour'), function($message) use ($booking)
