@@ -19,22 +19,3 @@
 	<strong>Card Type:</strong> {{ $booking->receipt['card_type'] }}<br />
 	<strong>Remote IP Address:</strong> {{ $booking->receipt['remote_ip'] }}
 </p>
-
-<h2>Tour Info</h2>
-
-@forelse($tour->dates as $date)
-
-	@if($booking->tour_date == $date['id'])
-
-		<h3>{{ $booking->tour_name }}</h3>
-		<p>
-			<strong>Total Price:</strong> ${{ number_format(($date['price']/100),2) }}<br />
-			<strong>Start Date:</strong> {{ $date['start_date'] }}<br />
-			<strong>End Date:</strong> {{ $date['end_date'] }}
-		</p>
-
-	@endif
-
-@empty
-
-@endforelse

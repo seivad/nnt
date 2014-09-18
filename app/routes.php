@@ -31,17 +31,6 @@ Route::get('/privacy', array('as' => 'privacy', 'uses' => 'PagesController@priva
 Route::get('/terms-and-agreements', array('as' => 'terms', 'uses' => 'PagesController@terms'));
 Route::get('/thank-you', array('as' => 'thank-you', 'uses' => 'PagesController@thankyou'));
 
-Route::get('/test', function() {
-
-	$booking = Booking::find('541acc40dc473e992b8b4569');
-
-	//dd($booking);
-
-	$tour = Tour::find($booking->id);
-	return View::make('emails.booking', compact('tour', 'booking'));
-
-});
-
 App::missing(function($exception)
 {
     return Response::view('pages.404', array(), 404);

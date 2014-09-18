@@ -75,15 +75,12 @@ class PagesController extends \BaseController {
 			$booking->receipt = Input::all();
 			$booking->save();
 
-			$tour = Tour::find($booking->id);
 			$tour = Tour::where('dates.id', (int) $booking->tour_date)->decrement('dates.$.spaces');
 
-			Mail::send('emails.booking', compact('booking', 'tour'), function($message)
+			Mail::send('emails.booking', compact('booking'), function($message)
 			{
 			    $message->to('mick@5150studios.com.au', 'Not Normal Tours')->subject('New Booking at Not Normal Tours');
 			});
-
-			
 
 			return View::make('pages.thankyou');
 			
