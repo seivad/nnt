@@ -83,6 +83,7 @@ class PagesController extends \BaseController {
 			});
 
 			$tour = Tour::where('dates.id', $booking->tour_date)->decrement('dates.$.spaces');
+			
 
 			return View::make('pages.thankyou');
 			
