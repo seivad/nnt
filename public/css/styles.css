@@ -197,6 +197,10 @@ input {
 
 }
 
+textarea {
+    width: 100%;
+}
+
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -662,6 +666,7 @@ background: #0e67a5;
   height: 100%;
   min-height: 250px;
   width: 100%;
+  color: #aeaeae;
 }
 
 #footer .content {
@@ -920,6 +925,11 @@ ul.socialmedia li a:hover, ul.socialmedia li a:active {
       margin: 0;
       position: absolute;
       top: 35px;
+    }
+
+    .button {
+        width: auto;
+        padding: 12px 16px;
     }
 
 }

@@ -18,8 +18,8 @@
 			<h3>South America Tours</h3>
 			<ul class="links">
 				<li>{{ link_to_route('middle-of-the-world', 'The Middle Of The World', null, array('class' => 'link')) }}</li>
-				<li><a href="#">Volcano Hopping (Coming Soon)</a></li>
-				<li><a href="#">Another World (Coming Soon)</a></li>
+				<li>Volcano Hopping (Coming Soon)</li>
+				<li>Another World (Coming Soon)</li>
 			</ul>
 		</div>
 
@@ -36,7 +36,7 @@
 
 		<div class="linkgroup quicklinks">
 			<h3>Connect With Us</h3>
-			<a href="tel:1300 664 667">1300 664 667</a>
+			<a href="tel:1300 669 664">1300 669 664</a>
 
 			<h3>Email</h3>
 			<a href="#">Quick Inquiry</a>
@@ -50,7 +50,6 @@
 
 <div id="copyright">
 	<div class="content">
-
 		<p>ABN: 30 324 455 454 | {{ link_to_route('terms', 'Terms &amp; Agreements') }} | {{ link_to_route('privacy', 'Privacy') }}</p>
 	</div><!-- /content -->
 </div><!-- /copyright -->

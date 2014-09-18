@@ -23,6 +23,38 @@ class PagesController extends \BaseController {
 		return View::make('pages.contact');
 	}
 
+	public function inquiry() {
+
+		$rules = array(
+			'captcha' => 'required|captcha',
+		    'name' => 'required',
+		    'email' => 'required|email',
+		    'phone' => 'required'
+		);
+
+		$messages = array(
+		    'captcha' => 'Please provide the captcha code.',
+		);
+
+		$input = Input::all();
+
+		$validator = Validator::make($input, $rules, $messages);
+
+		if ( $validator->fails() )
+		{
+		   return Redirect::route('contact')->withErrors($validator)->withInput(Input::except('captcha'));
+		}
+
+		Mail::send('emails.inquiry', compact('input'), function($message)
+		{
+		    $message->to('mick@5150studios.com.au', 'Not Normal Tours')->subject('Not Normal Tours Inquiry Form Submission');
+		});
+
+		Session::flash('message', 'Your message has been sent successfully!');
+		return Redirect::route('contact');
+
+	}
+
 	public function terms()
 	{
 		return View::make('pages.terms');
