@@ -38,7 +38,11 @@ App::missing(function($exception)
 
 Route::get('/increment', function(){
 
-Tour::where('dates.id', (int) $booking->tour_date)->increment('dates.$.spaces');
+//1354906891
+//572541906
+//1072327884
+
+Tour::where('dates.id', 572541906)->increment('dates.$.spaces');
 return 'done';
 });
 
