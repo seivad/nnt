@@ -19,6 +19,8 @@
 
 		<h2>{{ $tour->info['tour'] }}</h2>
 
+		<p><strong>{{ $tour->description }}</strong></p>
+
 		<ul class="itinerary">
 		@forelse($tour->itinerary as $itinerary)
 			<li>

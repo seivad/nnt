@@ -38,10 +38,11 @@ App::missing(function($exception)
 
 
 
-/*Route::get('/', array('as' => 'home', function()
+Route::get('/test', function()
 {
 
 	$tour = Tour::first();
+/*	
 	$tour->price = array('total' => 175000, 'deposit' => 25000);
 	$tour->logo = array('/images/tours/middle-of-the-world/logo.png', '/images/tours/middle-of-the-world/logo@2x.png');
 	$tour->text_logo = '/images/tours/middle-of-the-world/text-logo.png';
@@ -78,18 +79,23 @@ App::missing(function($exception)
 			'spaces' => 0
 		),
 	);
-	$tour->title = 'Middle Of The World Tour ';
+	$tour->title = 'Middle Of The World Tour';
 	$tour->length = '11 Days';
-	$tour->tagline = 'See the "EQUATOR" line, and enjoy the unique ritual standing in both halfs of the world.';
-	$tour->description = 'A tour that will offer you a different ways of celebrate the beauty of its own magical site. Night life with the local beautiful “latino” girls will make the tour even more exhotic, and joyable. Try the best local drinks while the music trasport you to a real “fiesta” happening in the center of the planet.';
+	*/
+	$tour->tagline = 'See the "Equator" line, and enjoy the unique ritual standing in both halfs of the world.';
+	$tour->description = 'A tour that will offer you a different ways of celebrate the beauty of its own magical site. Night life with the local beautiful "latino" girls will make the tour even more exotic, and joyable. Try the best local drinks while the music trasports you to a real "fiesta" partying in the center of the planet.';
 	$tour->reviews = array(
 		array('name' => 'Dan S.', 'review' => 'I thoroughly enjoyed my trip, tour guide was great and the atmosphere - just perfect', 'rating' => 4 )
 	);
+
 	$tour->gallery = array(
-		'/images/tours/middle-of-the-world/ecuador-mountains.jpg',
+		'/images/tours/middle-of-the-world/mountains.jpg',
+		'/images/tours/middle-of-the-world/beach.jpg',
+		'/images/tours/middle-of-the-world/night.jpg',
 		'/images/tours/middle-of-the-world/girls.jpg',
-		'/images/tours/middle-of-the-world/party.jpg',
+		'/images/tours/middle-of-the-world/clubbing.jpg',
 	);
+/*
 	$tour->featured_image = '/images/tours/middle-of-the-world/middle-of-the-world-feature.jpg';
 	$tour->footer_image = '/images/tours/middle-of-the-world/footer.jpg';
 	$tour->additional_trips = array(
@@ -149,10 +155,12 @@ App::missing(function($exception)
 			'activities' => array('Depart back to the Airport or continue on for further travel')
 		),
 	);
+*/
 	$tour->save();
 
-	return View::make('hello');
-}));*/
+	return 'updated';
+
+});
 
 
 
