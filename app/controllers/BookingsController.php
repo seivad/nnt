@@ -15,7 +15,7 @@ class BookingsController extends \BaseController {
 			return Redirect::route('tours');
 		}
 
-		$tour = Tour::find($id)->first();
+		$tour = Tour::find($id);
 
 		$tourdates = array();
 		foreach($tour->dates as $dates) {
@@ -48,8 +48,6 @@ class BookingsController extends \BaseController {
 	public function store()
 	{
 
-		
-
 		$validator = Validator::make(Input::all(), Booking::$rules, Booking::$messages);
 
 		if ( $validator->fails() )
@@ -73,10 +71,9 @@ class BookingsController extends \BaseController {
 	}
 
 
-	public function confirm($_id) {
+	public function confirm($id) {
 
-		$booking = Booking::find($_id);
-
+		$booking = Booking::find($id);
 		return View::make('bookings.confirm', compact('booking'));
 
 	}

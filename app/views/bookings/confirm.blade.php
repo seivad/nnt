@@ -14,16 +14,27 @@
 
 			<h1>Confirm Your Booking</h1>
 
+			<h3>{{ $booking['tour_name'] }}</h3>
+			@if($booking->payment == 'Make Your Full Payment')
+				<h3>Total: ${{ ($booking['price']/100) }}</h3>
+			@else
+				<h3>Deposit: ${{ ($booking['deposit']/100) }}</h3>
+			@endif
+			
+
+
 			{{ Form::open(array('url' => 'https://transact.nab.com.au/test/hpp/payment', 'class' => 'form')) }}
 			<input type="hidden" name="vendor_name" value="GJG0010" />
 			<input type="hidden" name="privacy_policy" value="{{ route('privacy') }}" />
 			<input type="hidden" name="refund_policy" value="{{ route('terms') }}" />
 			<input type="hidden" name="payment_alert" value="mick@5150studios.com.au" />
-			<input type="hidden" name="{{ $booking['tour_name'] }}" value="{{ ($booking['price']/100) }}" />
+			@if($booking->payment == 'Make Your Full Payment')
+				<input type="hidden" name="{{ $booking['tour_name'] }}" value="{{ ($booking['price']/100) }}" />
+			@else
+				<input type="hidden" name="{{ $booking['tour_name'] }} Deposit" value="{{ ($booking['deposit']/100) }}" />
+			@endif
 			<input type="hidden" name="payment_reference" value="{{ $booking['_id'] }}" />
 
-
-			
 			<input type="hidden" name="Email" value="{{ $booking['email'] }}" />
 			<input type="hidden" name="Address" value="{{ $booking['street_address'] }}" />
 			<input type="hidden" name="Name" value="{{ $booking['first_name'] . ' ' . $booking['last_name'] }}" />

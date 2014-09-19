@@ -2,6 +2,7 @@
 
 <h3>{{ $booking->tour_name }}</h3>
 <h4>Total Price: ${{ number_format(($booking->price / 100),2) }} | NAB Payment: ${{ number_format($booking->receipt['payment_amount'],2) }}</h4>
+<p><strong>Payment Reference:</strong> {{ $booking->receipt['payment_reference'] }}</p>
 
 <h2>Booking Info</h2>
 <p>
@@ -36,5 +37,7 @@
 	@endif
 
 @empty
+
+	<p>No Tour Dates Available</p>
 
 @endforelse
