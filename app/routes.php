@@ -36,13 +36,11 @@ App::missing(function($exception)
     return Response::view('pages.404', array(), 404);
 });
 
-
-
+/*
 Route::get('/test', function()
 {
 
 	$tour = Tour::first();
-/*	
 	$tour->price = array('total' => 175000, 'deposit' => 25000);
 	$tour->logo = array('/images/tours/middle-of-the-world/logo.png', '/images/tours/middle-of-the-world/logo@2x.png');
 	$tour->text_logo = '/images/tours/middle-of-the-world/text-logo.png';
@@ -81,7 +79,6 @@ Route::get('/test', function()
 	);
 	$tour->title = 'Middle Of The World Tour';
 	$tour->length = '11 Days';
-	*/
 	$tour->tagline = 'See the "Equator" line, and enjoy the unique ritual standing in both halfs of the world.';
 	$tour->description = 'A tour that will offer you a different ways of celebrate the beauty of its own magical site. Night life with the local beautiful "latino" girls will make the tour even more exotic, and joyable. Try the best local drinks while the music trasports you to a real "fiesta" partying in the center of the planet.';
 	$tour->reviews = array(
@@ -95,7 +92,7 @@ Route::get('/test', function()
 		'/images/tours/middle-of-the-world/girls.jpg',
 		'/images/tours/middle-of-the-world/clubbing.jpg',
 	);
-/*
+
 	$tour->featured_image = '/images/tours/middle-of-the-world/middle-of-the-world-feature.jpg';
 	$tour->footer_image = '/images/tours/middle-of-the-world/footer.jpg';
 	$tour->additional_trips = array(
@@ -155,12 +152,9 @@ Route::get('/test', function()
 			'activities' => array('Depart back to the Airport or continue on for further travel')
 		),
 	);
-*/
 	$tour->save();
 
 	return 'updated';
 
 });
-
-
-
+*/
