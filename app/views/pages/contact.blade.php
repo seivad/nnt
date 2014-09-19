@@ -13,7 +13,7 @@
 					<h3>Get In Touch</h3>
 					<p>We love to hear from our clients, so please get in touch.</p>
 					<p>
-						<strong>Phone:</strong> 1300 669 664<br />
+						<strong>Phone:</strong> 1300 367 376<br />
 						<strong>Email:</strong> info@notnormaltours.com<br />
 						<strong>Website:</strong> www.notnormaltours.com
 					</p>
