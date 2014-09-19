@@ -14,14 +14,12 @@
 
 			<h1>Confirm Your Booking</h1>
 
-			<h3>{{ $booking['tour_name'] }}</h3>
+			<h3>{{ $booking->tour_name }}</h3>
 			@if($booking->payment == 'Make Your Full Payment')
-				<h3>Total: ${{ ($booking['price']/100) }}</h3>
+				<h3>Total: ${{ ($booking->price / 100) }}</h3>
 			@else
-				<h3>Deposit: ${{ ($booking['deposit']/100) }}</h3>
+				<h3>Deposit: ${{ ($booking->deposit / 100) }}</h3>
 			@endif
-			
-
 
 			{{ Form::open(array('url' => 'https://transact.nab.com.au/test/hpp/payment', 'class' => 'form')) }}
 			<input type="hidden" name="vendor_name" value="GJG0010" />
@@ -29,20 +27,20 @@
 			<input type="hidden" name="refund_policy" value="{{ route('terms') }}" />
 			<input type="hidden" name="payment_alert" value="mick@5150studios.com.au" />
 			@if($booking->payment == 'Make Your Full Payment')
-				<input type="hidden" name="{{ $booking['tour_name'] }}" value="{{ ($booking['price']/100) }}" />
+				<input type="hidden" name="{{ $booking->tour_name }}" value="{{ ($booking->price / 100) }}" />
 			@else
-				<input type="hidden" name="{{ $booking['tour_name'] }} Deposit" value="{{ ($booking['deposit']/100) }}" />
+				<input type="hidden" name="{{ $booking->tour_name }} Deposit" value="{{ ($booking->deposit / 100) }}" />
 			@endif
-			<input type="hidden" name="payment_reference" value="{{ $booking['_id'] }}" />
+			<input type="hidden" name="payment_reference" value="{{ $booking->_id }}" />
 
-			<input type="hidden" name="Email" value="{{ $booking['email'] }}" />
-			<input type="hidden" name="Address" value="{{ $booking['street_address'] }}" />
-			<input type="hidden" name="Name" value="{{ $booking['first_name'] . ' ' . $booking['last_name'] }}" />
-			<input type="hidden" name="Suburb" value="{{ $booking['suburb'] }}" />
-			<input type="hidden" name="State" value="{{ $booking['state'] }}" />
-			<input type="hidden" name="Country" value="{{ $booking['country'] }}" />
-			<input type="hidden" name="Postcode" value="{{ $booking['postcode'] }}" />
-			<input type="hidden" name="Phone" value="{{ $booking['phone'] }}" />
+			<input type="hidden" name="Email" value="{{ $booking->email }}" />
+			<input type="hidden" name="Address" value="{{ $booking->street_address }}" />
+			<input type="hidden" name="Name" value="{{ $booking->first_name . ' ' . $booking->last_name }}" />
+			<input type="hidden" name="Suburb" value="{{ $booking->suburb }}" />
+			<input type="hidden" name="State" value="{{ $booking->state }}" />
+			<input type="hidden" name="Country" value="{{ $booking->country }}" />
+			<input type="hidden" name="Postcode" value="{{ $booking->postcode }}" />
+			<input type="hidden" name="Phone" value="{{ $booking->phone }}" />
 
 			
 			<input type="hidden" name="information_fields" value="Email,Name,Address,Suburb,State,Country,Postcode,Phone" />			
