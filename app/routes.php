@@ -36,6 +36,12 @@ App::missing(function($exception)
     return Response::view('pages.404', array(), 404);
 });
 
+Route::get('/increment', function(){
+
+Tour::where('dates.id', (int) $booking->tour_date)->increment('dates.$.spaces');
+return 'done';
+});
+
 /*
 Route::get('/test', function()
 {
