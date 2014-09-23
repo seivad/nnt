@@ -36,7 +36,7 @@ App::missing(function($exception)
     return Response::view('pages.404', array(), 404);
 });
 
-Route::get('/increment', function(){
+/*Route::get('/increment', function(){
 
 //1354906891
 //572541906
@@ -44,7 +44,7 @@ Route::get('/increment', function(){
 
 Tour::where('dates.id', 572541906)->increment('dates.$.spaces');
 return 'done';
-});
+});*/
 
 /*
 Route::get('/test', function()
