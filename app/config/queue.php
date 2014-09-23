@@ -43,8 +43,8 @@ return array(
 
 		'sqs' => array(
 			'driver' => 'sqs',
-			'key'    => 'AKIAIXVRN2BL2OQAH7GA',
-			'secret' => '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 ',
+			'key'    => 'AKIAISY7C7E4YK2OVHHQ',
+			'secret' => ' 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',
 			'queue'  => 'https://sqs.ap-southeast-2.amazonaws.com/195571452128/NotNormalTours-Emails',
 			'region' => 'ap-southeast-2',
 		),
