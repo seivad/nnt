@@ -46,9 +46,9 @@ class PagesController extends \BaseController {
 		   return Redirect::route('contact')->withErrors($validator)->withInput(Input::except('captcha'));
 		}
 
-		Mail::queue('emails.inquiry', compact('input'), function($message)
+		Mail::send('emails.inquiry', compact('input'), function($message)
 		{
-		    $message->to('mick@5150studios.com.au', 'Not Normal Tours')->subject('Not Normal Tours Inquiry Form Submission');
+		    $message->to('dale@bluewell.com.au', 'Not Normal Tours')->subject('Not Normal Tours Inquiry Form Submission');
 		});
 
 		Session::flash('message', 'Your message has been sent successfully!');
@@ -80,7 +80,7 @@ class PagesController extends \BaseController {
 
 			Mail::send('emails.booking', compact('booking', 'tour'), function($message)
 			{
-			    $message->to('mick@5150studios.com.au', 'Not Normal Tours')->subject('New Booking at Not Normal Tours');
+			    $message->to('dale@bluewell.com.au', 'Not Normal Tours')->subject('New Booking at Not Normal Tours');
 			});
 
 			return View::make('pages.thankyou');

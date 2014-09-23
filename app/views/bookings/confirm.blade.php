@@ -21,11 +21,11 @@
 				<h3>Deposit: ${{ ($booking->deposit / 100) }}</h3>
 			@endif
 
-			{{ Form::open(array('url' => 'https://transact.nab.com.au/test/hpp/payment', 'class' => 'form')) }}
+			{{ Form::open(array('url' => 'https://transact.nab.com.au/live/hpp/payment', 'class' => 'form')) }}
 			<input type="hidden" name="vendor_name" value="GJG0010" />
 			<input type="hidden" name="privacy_policy" value="{{ route('privacy') }}" />
 			<input type="hidden" name="refund_policy" value="{{ route('terms') }}" />
-			<input type="hidden" name="payment_alert" value="mick@5150studios.com.au" />
+			<input type="hidden" name="payment_alert" value="dale@bluewell.com.au" />
 			@if($booking->payment == 'Make Your Full Payment')
 				<input type="hidden" name="{{ $booking->tour_name }}" value="{{ ($booking->price / 100) }}" />
 			@else
