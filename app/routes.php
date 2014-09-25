@@ -25,7 +25,7 @@ App::missing(function($exception)
     return Response::view('pages.404', array(), 404);
 });
 
-/*Route::get('/test', function()
+Route::get('/test', function()
 {
 
 	$tour = Tour::first();
@@ -48,21 +48,21 @@ App::missing(function($exception)
 			'start_date' => '26/09/2014',
 			'end_date' => '07/10/2014',
 			'price' => 248700,
-			'spaces' => 3
+			'spaces' => 11
 		),
 		array(
 			'id' => mt_rand(),
 			'start_date' => '8/10/2014',
 			'end_date' => '19/10/2014',
 			'price' => 248700,
-			'spaces' => 1
+			'spaces' => 10
 		),
 		array(
 			'id' => mt_rand(),
 			'start_date' => '20/10/2014',
 			'end_date' => '31/10/2014',
 			'price' => 248700,
-			'spaces' => 6
+			'spaces' => 4
 		),
 	);
 	$tour->title = 'Middle Of The World Tour';
@@ -144,5 +144,5 @@ App::missing(function($exception)
 
 	return 'updated';
 
-});*/
+});
 
