@@ -1,5 +1,14 @@
 @extends('layouts.master')
 
+@section('title')
+	Middle Of The World Tour
+@stop
+
+@section('meta')
+	<meta name="description" content="Middle of the World Tour takes you on a one of a kind journey throughout Ecuador.">
+	<meta name="keywords" content="south american tours, ecuador tours, under 30s tours, travel south america, brazil singles tours, not normal tours">
+@stop
+
 @section('styles')
 	<link rel="stylesheet" href="{{ asset('/css/middle-of-the-world.css') }}">
 @stop
@@ -29,7 +38,7 @@
 				@forelse($itinerary['activities'] as $activities)
 					{{ $activities }}<br />
 				@empty
-
+					No Activities are available.
 				@endforelse
 				</p>
 			</li>
@@ -56,7 +65,7 @@
 					@forelse($tour->info['included'] as $inclusions)
 					{{ $inclusions }},
 				@empty
-				No Info available on included items
+					No Info available on included items
 				@endforelse
 				</p>
 
@@ -174,16 +183,13 @@
 	<div class="footergraphic"></div>
 
 </div><!-- /container -->
+@stop
 
+@section('scripts')
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
 
 	$(document).ready(function() {
-		//$('#booknow').click(function(e){
-			//$('#bookings').slideToggle('slow');
-			//e.preventDefault();
-		//});
-
 		$(".clickableRow").click(function() {
 	            window.document.location = $(this).attr("href");
 	      });
@@ -201,7 +207,6 @@
 		};
 
 		SetRatingStar();
-
 	});
 
 	function init_map(){
@@ -221,25 +226,25 @@
 		  scale: 4
 		};
 
+		/*		
 		var flightPath = new google.maps.Polyline({
-		path: flightPlanCoordinates,
-		geodesic: true,
-		strokeColor: '#f89a1f',
-		strokeOpacity: 0,
-		strokeWeight: 1,
-		icons: [{
-			icon: lineSymbol,
-			offset: '0',
-			repeat: '20px'
-		}],
-			});
+			path: flightPlanCoordinates,
+			geodesic: true,
+			strokeColor: '#f89a1f',
+			strokeOpacity: 0,
+			strokeWeight: 1,
+			icons: [{
+				icon: lineSymbol,
+				offset: '0',
+				repeat: '20px'
+			}],
+		});
 
-			flightPath.setMap(map);
-
-
+		flightPath.setMap(map);
+		*/
 	}
+
 	google.maps.event.addDomListener(window, 'load', init_map);
 	google.maps.event.addDomListener(window, 'resize', init_map);
 </script>
-
 @stop

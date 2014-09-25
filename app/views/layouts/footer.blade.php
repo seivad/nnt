@@ -53,14 +53,3 @@
 		<p>ABN: 30 324 455 454 | {{ link_to_route('terms', 'Terms &amp; Agreements') }} | {{ link_to_route('privacy', 'Privacy') }}</p>
 	</div><!-- /content -->
 </div><!-- /copyright -->
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55080226-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
