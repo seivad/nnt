@@ -25,6 +25,7 @@ class Booking extends Eloquent {
 	    'month' => 'required',
 	    'year' => 'required',
 	    'tour_date' => 'required',
+	    'passport' => 'required',
 	    'street_address' => 'required',
 	    'suburb' => 'required',
 	    'state' => 'required',

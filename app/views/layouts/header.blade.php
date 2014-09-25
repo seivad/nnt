@@ -23,9 +23,9 @@
 		</nav>
 
 		<ul class="socialmedia">
-			<li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-2x fa-google-plus-square"></i></a></li>
+			<li><a href="https://www.facebook.com/notnormaltours" target="_blank"><i class="fa fa-2x fa-facebook-square"></i></a></li>
+			<li><a href="#" target="_blank"><i class="fa fa-2x fa-twitter-square"></i></a></li>
+			<li><a href="#" target="_blank"><i class="fa fa-2x fa-google-plus-square"></i></a></li>
 		</ul>
 	</div>
 </div>	

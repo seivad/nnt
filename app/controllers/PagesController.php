@@ -23,6 +23,11 @@ class PagesController extends \BaseController {
 		return View::make('pages.contact');
 	}
 
+	public function old()
+	{
+		return View::make('pages.old');
+	}
+
 	public function inquiry() {
 
 		$rules = array(

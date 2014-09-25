@@ -35,6 +35,7 @@
 
 			{{ Form::open(array('route' => 'bookings.store', 'class' => 'form')) }}
 
+			<h3>Step 1.</h3>
 			<div class="half">
 
 				<div class="input @if ($errors->has('title')) has-error @endif">
@@ -130,10 +131,19 @@
 					@if ($errors->has('country')) <p class="help-block">{{ $errors->first('country') }}</p>@endif
 				</div>
 
+				<div class="input @if ($errors->has('passport')) has-error @endif">
+					{{ Form::label('passport', 'Passport Number') }}
+					{{ Form::text('passport') }}
+					@if ($errors->has('passport')) <p class="help-block">{{ $errors->first('passport') }}</p>@endif
+				</div>
+
 			</div>
 
-			<div class="full">
-				<hr />
+			<hr />
+
+			<div class="half">
+				
+				<h3>Step 2.</h3>
 
 				<div class="input">
 					{{ Form::label('tour_name', 'Select A Tour') }}
@@ -149,8 +159,9 @@
 					@if ($errors->has('tour_date')) <p class="help-block">{{ $errors->first('tour_date') }}</p>@endif
 				</div>				
 
-				<hr />
-
+			</div>
+			
+			<div class="half half_last">
 				<h1>Tour Info</h1>
 				<h3>{{ $tour->title }}</h3>
 				<p>
@@ -162,8 +173,12 @@
 						<span class="pricing" id="{{ $dates['id'] }}">${{ number_format(($dates['price']/100),2) }} AUD</span>
 					@endforeach
 				</p>
+			</div>
 
-				<hr />
+			<hr />
+
+			<div class="half">
+				<h3>Step 3.</h3>
 
 				<div class="input @if ($errors->has('terms')) has-error @endif">
 					<label for="terms">
@@ -175,13 +190,13 @@
 				{{ Form::hidden('price', null, array('id' => 'price')) }}
 				{{ Form::hidden('deposit', $tour->price['deposit']) }}
 				{{ Form::hidden('id', $tour->id ) }}
-
-				<hr />
-
 			</div>
 
+			<hr />
 
 			<div class="half">
+
+				<h3>Step. 4</h3>
 
 				<div class="input @if ($errors->has('captcha')) has-error @endif">
 					{{ Form::label('captcha', 'Are You Human?') }}
@@ -190,6 +205,13 @@
 					@if ($errors->has('captcha')) <p class="help-block">{{ $errors->first('captcha') }}</p>@endif
 				</div>
 
+			</div>
+			
+			<hr />
+
+			<div class="half">	
+
+				<h3>Step 5.</h3>
 				<div class="submit">
 					{{ Form::submit('Make Your Full Payment', array('class' => 'button orange', 'name' => 'payment')) }}
 					{{ Form::submit('Make Your Deposit', array('class' => 'button blue', 'name' => 'payment')) }}

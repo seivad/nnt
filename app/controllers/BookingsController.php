@@ -50,6 +50,10 @@ class BookingsController extends \BaseController {
 
 		$validator = Validator::make(Input::all(), Booking::$rules, Booking::$messages);
 
+		if(Input::get('year') <= 1974) {
+			return Redirect::route('too-old');
+		}
+
 		if ( $validator->fails() )
 		{
 		   return Redirect::route('bookings', array(Input::get('id'), Input::get('tour_date')))->withErrors($validator)->withInput(Input::except('captcha'));

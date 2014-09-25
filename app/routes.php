@@ -30,6 +30,9 @@ Route::get('/tours', array('as' => 'tours', 'uses' => 'ToursController@index'));
 Route::get('/privacy', array('as' => 'privacy', 'uses' => 'PagesController@privacy'));
 Route::get('/terms-and-agreements', array('as' => 'terms', 'uses' => 'PagesController@terms'));
 Route::get('/thank-you', array('as' => 'thank-you', 'uses' => 'PagesController@thankyou'));
+Route::get('/might-not-be-for-you', array('as' => 'too-old', 'uses' => 'PagesController@old'));
+
+
 
 App::missing(function($exception)
 {

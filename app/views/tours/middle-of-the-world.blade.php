@@ -84,8 +84,6 @@
 					
 				<p><strong>Terms &amp; Conditions:</strong> To secure your booking a deposit of $250 dollars has to be paid at the time of booking. The remainding amount has to be paid 2 weeks prior to the departure day.</p>
 
-				<a href="#" class="button orange" id="booknow">Book Now</a>
-				<a href="{{ route('contact') }}" class="button blue" id="booking-request">Booking Request</a>
 
 				<div id="bookings">
 					<h3>Available Dates:</h3>
@@ -104,7 +102,7 @@
 							@if($dates['spaces'] > 0)
 
 
-								<tr class='clickableRow' href='{{ url('bookings', $parameters = array($tour->id, $dates['id'])) }}'>
+								<tr class='clickableRow' title="{{ ($dates['spaces'] < 5) ? "Hurry less than 5 spots available" : $dates['spaces'] . " spots available"}}" href='{{ url('bookings', $parameters = array($tour->id, $dates['id'])) }}'>
 									<td>{{ $dates['start_date'] }}</td>
 									<td>{{ $dates['spaces'] }}</td>
 									<td>${{ number_format(($dates['price']/100), 2) }} AUD</td>
@@ -127,6 +125,10 @@
 						</tbody>
 					</table>
 				</div><!-- /bookings -->
+
+				<hr />
+
+				<a href="{{ route('contact') }}" class="button blue" id="booking-request">Booking Inquiry</a>
 
 			</div><!-- /info -->
 
@@ -177,10 +179,10 @@
 <script type="text/javascript">
 
 	$(document).ready(function() {
-		$('#booknow').click(function(e){
-			$('#bookings').slideToggle('slow');
-			e.preventDefault();
-		});
+		//$('#booknow').click(function(e){
+			//$('#bookings').slideToggle('slow');
+			//e.preventDefault();
+		//});
 
 		$(".clickableRow").click(function() {
 	            window.document.location = $(this).attr("href");
