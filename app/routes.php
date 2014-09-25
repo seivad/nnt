@@ -1,17 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-
-
 //Booking A Tour Page
 Route::get('/bookings/complete', array('uses' => 'BookingsController@complete'));
 Route::get('/bookings/confirm/{id?}', array('as' => 'bookings.confirm', 'uses' => 'BookingsController@confirm'));
@@ -32,25 +20,12 @@ Route::get('/terms-and-agreements', array('as' => 'terms', 'uses' => 'PagesContr
 Route::get('/thank-you', array('as' => 'thank-you', 'uses' => 'PagesController@thankyou'));
 Route::get('/might-not-be-for-you', array('as' => 'too-old', 'uses' => 'PagesController@old'));
 
-
-
 App::missing(function($exception)
 {
     return Response::view('pages.404', array(), 404);
 });
 
-/*Route::get('/increment', function(){
-
-//1354906891
-//572541906
-//1072327884
-
-Tour::where('dates.id', 572541906)->increment('dates.$.spaces');
-return 'done';
-});*/
-
-
-Route::get('/test', function()
+/*Route::get('/test', function()
 {
 
 	$tour = Tour::first();
@@ -169,5 +144,5 @@ Route::get('/test', function()
 
 	return 'updated';
 
-});
+});*/
 
