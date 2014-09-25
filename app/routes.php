@@ -25,7 +25,7 @@ App::missing(function($exception)
     return Response::view('pages.404', array(), 404);
 });
 
-Route::get('/test', function()
+/*Route::get('/test', function()
 {
 
 	$tour = Tour::first();
@@ -145,4 +145,4 @@ Route::get('/test', function()
 	return 'updated';
 
 });
-
+*/
