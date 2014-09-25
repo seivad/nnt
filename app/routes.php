@@ -49,12 +49,12 @@ Tour::where('dates.id', 572541906)->increment('dates.$.spaces');
 return 'done';
 });*/
 
-/*
+
 Route::get('/test', function()
 {
 
 	$tour = Tour::first();
-	$tour->price = array('total' => 175000, 'deposit' => 25000);
+	$tour->price = array('total' => 248700, 'deposit' => 25000);
 	$tour->logo = array('/images/tours/middle-of-the-world/logo.png', '/images/tours/middle-of-the-world/logo@2x.png');
 	$tour->text_logo = '/images/tours/middle-of-the-world/text-logo.png';
 	$tour->info = array(
@@ -72,22 +72,22 @@ Route::get('/test', function()
 			'id' => mt_rand(),
 			'start_date' => '26/09/2014',
 			'end_date' => '07/10/2014',
-			'price' => 175000,
+			'price' => 248700,
 			'spaces' => 3
 		),
 		array(
 			'id' => mt_rand(),
 			'start_date' => '8/10/2014',
 			'end_date' => '19/10/2014',
-			'price' => 180000,
+			'price' => 248700,
 			'spaces' => 1
 		),
 		array(
 			'id' => mt_rand(),
 			'start_date' => '20/10/2014',
 			'end_date' => '31/10/2014',
-			'price' => 175000,
-			'spaces' => 0
+			'price' => 248700,
+			'spaces' => 6
 		),
 	);
 	$tour->title = 'Middle Of The World Tour';
@@ -141,13 +141,13 @@ Route::get('/test', function()
 		),
 		array(
 			'day' => 'Day 7',
-			'title' => 'Ayahuashca Journey day',
-			'activities' => array('(A journey managed by a Shaman local indigenous to transport you anywhere) Journey unknown by the western world')
+			'title' => 'Amazing Jungle Journey day',
+			'activities' => array('A journey with a local indigenous Shaman, with the option to drink a local Ayahuashca a traditional medicine used in spiritual healing ceremonies. This is a journey unknown by most the western world')
 		),
 		array(
 			'day' => 'Day 8',
 			'title' => '"MIDDLE OF THE WORLD"',
-			'activities' => array('Breakfast and travel back to the center of the World', 'Afternoon: Visit the “Equator Line” (Ritual)', 'Celebrate night life')
+			'activities' => array('For centuries the Navy’s of the world have had a rite of passage ritual for passing the over the equator by boat for the first time. You can experience our take on this ceremony, as we cross the worlds equator')
 		),
 		array(
 			'day' => 'Day 9',
@@ -170,4 +170,4 @@ Route::get('/test', function()
 	return 'updated';
 
 });
-*/
+
