@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+<?php //dd($tour->dates); ?>
+
 	@section('styles')
 		<link rel="stylesheet" href="{{ asset('/css/middle-of-the-world.css') }}">
 	@stop
@@ -11,25 +13,6 @@
 	@section('content')
 	<div class="container">
 		<div class="content inner group">
-
-
-			<script>
-				$(document).ready(function() {
-
-					$('#tour_date').change(function() {
-						$('.pricing').hide();
-						var value = $('#tour_date').val();
-						console.log(value);
-						var price = $('#' + value).text().replace('$', '').replace('.', '').replace(',', '').replace(' AUD', '');
-						console.log(price);
-						$('#' + value).toggle();
-						$('#price').val(price);
-
-					}).trigger('change');
-
-				});
-			</script>
-
 
 			<h1>Make Your Booking</h1>
 
@@ -170,7 +153,7 @@
 				<strong>Finishes:</strong> {{ $tour->info['finish'] }}<br />
 				<strong>Total Price:</strong>
 					@foreach($tour->dates as $dates)
-						<span class="pricing" id="{{ $dates['id'] }}">${{ number_format(($dates['price']/100),2) }} AUD</span>
+						<span class="pricing" id="{{ $dates['id'] }}">${{ number_format($dates['price']/100, 2) }} AUD</span>
 					@endforeach
 				</p>
 			</div>
@@ -225,5 +208,23 @@
 
 @stop
 
+@section('scripts')
+			<script>
+				$(document).ready(function() {
+
+					$('#tour_date').change(function() {
+						$('.pricing').hide();
+						var value = $('#tour_date').val();
+						console.log(value);
+						var price = $('#' + value).text().replace('$', '').replace('.', '').replace(',', '').replace(' AUD', '');
+						console.log(price);
+						$('#' + value).toggle();
+						$('#price').val(price);
+
+					}).trigger('change');
+
+				});
+			</script>
+@stop
 
 
