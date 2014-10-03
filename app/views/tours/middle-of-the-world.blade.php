@@ -96,7 +96,7 @@
 
 				<div id="bookings">
 					<h3>Available Dates:</h3>
-
+					<p><em>Select your tour date.</em></p>
 					<table>
 						<thead>
 							<tr>

@@ -84,7 +84,6 @@ box-sizing: border-box;
 *, *:before, *:after {
 box-sizing: inherit;
 }
-
 *:focus {
 outline: none;
 } 
@@ -140,7 +139,9 @@ a, a:link, a:visited {
 a:hover, a:active, a:focus {
     color: #f08c09;
 }
-
+em {
+  font-style: italic;
+}
 .half {
     width: 100%;
     float: left;
