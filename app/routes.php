@@ -25,7 +25,7 @@ App::missing(function($exception)
     return Response::view('pages.404', array(), 404);
 });
 
-/*Route::get('/test', function()
+Route::get('/test', function()
 {
 
 	$tour = Tour::first();
@@ -45,25 +45,74 @@ App::missing(function($exception)
 	$tour->dates = array(
 		array(
 			'id' => mt_rand(),
-			'start_date' => '26/09/2014',
-			'end_date' => '07/10/2014',
+			'start_date' => '18/12/2014',
+			'end_date' => '28/12/2014',
 			'price' => 248700,
-			'spaces' => 11
+			'spaces' => 16
 		),
 		array(
 			'id' => mt_rand(),
-			'start_date' => '8/10/2014',
-			'end_date' => '19/10/2014',
+			'start_date' => '02/01/2015',
+			'end_date' => '12/01/2015',
 			'price' => 248700,
-			'spaces' => 10
+			'spaces' => 16
 		),
 		array(
 			'id' => mt_rand(),
-			'start_date' => '20/10/2014',
-			'end_date' => '31/10/2014',
+			'start_date' => '15/01/2015',
+			'end_date' => '25/01/2015',
 			'price' => 248700,
-			'spaces' => 4
+			'spaces' => 16
 		),
+		array(
+			'id' => mt_rand(),
+			'start_date' => '29/01/2015',
+			'end_date' => '08/02/2015',
+			'price' => 248700,
+			'spaces' => 16
+		),
+		array(
+			'id' => mt_rand(),
+			'start_date' => '12/02/2015',
+			'end_date' => '22/02/2015',
+			'price' => 248700,
+			'spaces' => 16
+		),
+		array(
+			'id' => mt_rand(),
+			'start_date' => '26/02/2015',
+			'end_date' => '08/03/2015',
+			'price' => 248700,
+			'spaces' => 16
+		),
+		array(
+			'id' => mt_rand(),
+			'start_date' => '12/03/2015',
+			'end_date' => '22/03/2015',
+			'price' => 248700,
+			'spaces' => 16
+		),
+		array(
+			'id' => mt_rand(),
+			'start_date' => '26/03/2015',
+			'end_date' => '05/04/2015',
+			'price' => 248700,
+			'spaces' => 16
+		),
+		array(
+			'id' => mt_rand(),
+			'start_date' => '09/04/2015',
+			'end_date' => '19/04/2015',
+			'price' => 248700,
+			'spaces' => 16
+		),
+		array(
+			'id' => mt_rand(),
+			'start_date' => '23/04/2015',
+			'end_date' => '04/05/2015',
+			'price' => 248700,
+			'spaces' => 16
+		)
 	);
 	$tour->title = 'Middle Of The World Tour';
 	$tour->length = '11 Days';
@@ -84,9 +133,7 @@ App::missing(function($exception)
 	$tour->featured_image = '/images/tours/middle-of-the-world/middle-of-the-world-feature.jpg';
 	$tour->footer_image = '/images/tours/middle-of-the-world/footer.jpg';
 	$tour->additional_trips = array(
-		'Galapagos Islands cruises', 
-		'Amazon Jungle “Ayahuashca Journey”',
-		'Fun in the volcanoes tour',
+		'Galapagos Islands cruises'
 	);
 	$tour->itinerary = array(
 		array(
@@ -145,4 +192,4 @@ App::missing(function($exception)
 	return 'updated';
 
 });
-*/
+
