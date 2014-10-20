@@ -14,8 +14,12 @@
 					<p>We love to hear from our clients, so please get in touch.</p>
 					<p>
 						<strong>Phone:</strong> 1300 367 376<br />
+						<strong>Fax:</strong> 1300 669 411<br />
 						<strong>Email:</strong> info@notnormaltours.com<br />
-						<strong>Website:</strong> www.notnormaltours.com
+						<strong>Website:</strong> www.notnormaltours.com<br />
+						<strong>Address:</strong> Suite 30807/9 Lawson Street<br />
+												Southport, Qld, 4215<br />
+						<strong>ABN:</strong> 90602074395
 					</p>
 				</div>
 

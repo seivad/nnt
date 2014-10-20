@@ -70,7 +70,7 @@
 
 				<p>Once full payment has been made, there will be no refund. Any residual balance paid (after the applicable fees are deducted) may be held in credit towards future bookings with No Normal Tours. This credit can only be held for a maximum period of twelve months from the day the booking is cancelled.</p>
 
-				<p>To redeem moneys held in credit, customers must call central reservations on 1300 669 664. prior to the expiry of the 12 months to rebook another Tour. Moneys not redeemed at the expiry of the 6 months will be forfeited in their entirety to No Normal Tours.</p>
+				<p>To redeem moneys held in credit, customers must call central reservations on 1300 367 376. prior to the expiry of the 12 months to rebook another Tour. Moneys not redeemed at the expiry of the 6 months will be forfeited in their entirety to No Normal Tours.</p>
 
 				<h3>BOOKING TERMS &amp; CONDITIONS - GENERAL</h3>
 				<p>
