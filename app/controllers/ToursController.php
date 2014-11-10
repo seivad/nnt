@@ -13,82 +13,20 @@ class ToursController extends \BaseController {
 		return View::make('tours.index');
 	}
 
-	public function middleOfTheWorld() {
+
+	public function middleOfTheWorld()
+	{
 
 
-		$tour = Tour::first();
+		$tour = Cache::rememberForever('middleOfTheWorld', function()
+		{
+		  return Tour::first();
+		});
+
+		//$tour = Tour::first();
 
 		return View::make('tours.middle-of-the-world', compact('tour'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /tours/create
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /tours
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
-
-	/**
-	 * Display the specified resource.
-	 * GET /tours/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /tours/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /tours/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 * DELETE /tours/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
 
 }

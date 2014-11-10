@@ -20,6 +20,7 @@ Route::get('/terms-and-agreements', array('as' => 'terms', 'uses' => 'PagesContr
 Route::get('/thank-you', array('as' => 'thank-you', 'uses' => 'PagesController@thankyou'));
 Route::get('/might-not-be-for-you', array('as' => 'too-old', 'uses' => 'PagesController@old'));
 
+
 App::missing(function($exception)
 {
     return Response::view('pages.404', array(), 404);

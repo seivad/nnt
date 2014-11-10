@@ -22,6 +22,12 @@ App::after(function($request, $response)
 	//
 });
 
+//Cache Pro
+Route::filter('cache.fetch', 'NNT\Filters\CacheFilter@fetch');
+Route::filter('cache.put', 'NNT\Filters\CacheFilter@put');
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Authentication Filters

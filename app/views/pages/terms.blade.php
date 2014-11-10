@@ -16,7 +16,7 @@
 				<p>Credit Card - Visa and Mastercard 2% credit card fee applies (3 % international), Amex 3.5%.</p>
 
 				<h3>HOW TO BOOK / QUOTES AND RESERVATIONS</h3>
-				<p>Bookings can be made over at: {{ URL('/') }} or by calling Central Reservations on 1300 669 664. if calling.</p>
+				<p>Bookings can be made over at: {{ URL('/') }} or by calling Central Reservations on 1300 367 376. if calling.</p>
 				<p>Reservations are subject to availability and actual pricing at the time of booking.</p>
 				<p>Verbal quotes are valid for 24 hours only. Any verbal quote given is an estimate only of price, which will be subject to a written advice on confirmation of the reservation.</p>
 				<p>A 2% - 3.5 % surcharge will apply to all credit card and debit card transactions.</p>
