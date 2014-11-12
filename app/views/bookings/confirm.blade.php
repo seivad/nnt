@@ -41,7 +41,12 @@
 			    data-panel-label="Buy Now"
 			    data-description="${{ number_format($booking->price/100, 2) }}">
 			  </script>
-			  <input type="hidden" name="amount" value="{{ $booking->price }}" />
+			@if($booking->payment == 'Make Your Full Payment')
+				<input type="hidden" name="amount" value="{{ $booking->price }}" />
+			@else
+				<input type="hidden" name="amount" value="{{ $booking->deposit }}" />
+			@endif
+			  
 			  <input type="hidden" name="email" value="{{ $booking->email }}" />
 			  <input type="hidden" name="payment_reference" value="{{ $booking->_id }}" />
 			</form>
