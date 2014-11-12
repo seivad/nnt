@@ -94,7 +94,7 @@ class PagesController extends \BaseController {
 
 			Mail::send('emails.stripebooking', compact('booking', 'tour'), function($message)
 			{
-			    $message->to('mick@5150studios.com.au', 'Not Normal Tours')->subject('New Booking at Not Normal Tours');
+			    $message->to('dale@bluewell.com.au', 'Not Normal Tours')->subject('New Booking at Not Normal Tours');
 			});
 
 			return View::make('pages.thankyou');
