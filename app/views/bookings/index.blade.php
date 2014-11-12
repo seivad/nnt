@@ -1,7 +1,5 @@
 @extends('layouts.master')
 
-<?php //dd($tour->dates); ?>
-
 	@section('styles')
 		<link rel="stylesheet" href="{{ asset('/css/middle-of-the-world.css') }}">
 	@stop

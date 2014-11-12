@@ -21,6 +21,35 @@
 				<h3>Deposit: ${{ ($booking->deposit / 100) }}</h3>
 			@endif
 
+			@if (Session::has('message'))
+			   <div class="alert alert-info">{{ Session::get('message') }}</div>
+			@endif
+
+
+			<form action="{{ route('bookings.finish') }}" method="POST">
+			  <script
+			    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+			    data-key="pk_live_79DIJGbdYPs6WMmjcd6MwPzA"
+			@if($booking->payment == 'Make Your Full Payment')
+				data-amount="{{ $booking->price }}"
+			@else
+				data-amount="{{ $booking->deposit }}"
+			@endif
+			    data-name="{{ $booking->tour_name }}"
+			    data-email="{{ $booking->email }}"
+			    data-currency="AUD"
+			    data-panel-label="Buy Now"
+			    data-description="${{ number_format($booking->price/100, 2) }}">
+			  </script>
+			  <input type="hidden" name="amount" value="{{ $booking->price }}" />
+			  <input type="hidden" name="email" value="{{ $booking->email }}" />
+			  <input type="hidden" name="payment_reference" value="{{ $booking->_id }}" />
+			</form>
+
+
+
+<?php /*
+
 			{{ Form::open(array('url' => 'https://transact.nab.com.au/live/hpp/payment', 'class' => 'form')) }}
 			<input type="hidden" name="vendor_name" value="GJG0010" />
 			<input type="hidden" name="privacy_policy" value="{{ route('privacy') }}" />
@@ -57,12 +86,17 @@
 			<input type="hidden" name="reply_link_url" value="{{ URL::to('/') }}/bookings/complete?payment_reference=&amp;bank_reference=&amp;payment_amount=&amp;payment_date=&amp;payment_number=&amp;card_type=&amp;remote_ip=" />
 
 
+
+
 				<div class="submit half">
 					{{ Form::submit('Confirm Your Booking', array('class' => 'button orange')) }}
 				</div>
+
+*/ ?>				
 			</div>
 
-			{{ Form::close() }}
+			<?php /* {{ Form::close() }} */ ?>
+
 		</div><!-- /content -->
 	</div><!-- /container -->
 	@stop

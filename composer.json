@@ -7,7 +7,8 @@
 		"laravel/framework": "4.2.*",
 		"jenssegers/mongodb": "*",
 		"mews/captcha": "dev-master",
-		"aws/aws-sdk-php": "*"
+		"aws/aws-sdk-php": "*",
+		"stripe/stripe-php": "1.*"
 	},
 		"require-dev": {
     	"way/generators": "~2.0"

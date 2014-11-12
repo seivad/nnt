@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'mick@5150studios.com.au', 'name' => 'Not Normal Tours'),
+	'from' => array('address' => 'info@notnormaltours.com', 'name' => 'Not Normal Tours'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'AKIAISY7C7E4YK2OVHHQ',
+	'username' => 'AKIAJNHP4IUYBEAVZQ3A',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'uwQpN3jaCOBZ+XcDxQredOIfdDrlOwcxmqB+yvwe',
+	'password' => 'AixLxEzqSS0f31c+9otZPZy94LX+5ATHfuVDVBrlqkAD',
 
 	/*
 	|--------------------------------------------------------------------------

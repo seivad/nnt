@@ -3,6 +3,7 @@
 //Booking A Tour Page
 Route::get('/bookings/complete', array('uses' => 'BookingsController@complete'));
 Route::get('/bookings/confirm/{id?}', array('as' => 'bookings.confirm', 'uses' => 'BookingsController@confirm'));
+Route::post('/bookings/finish', array('as' => 'bookings.finish', 'uses' => 'BookingsController@finish'));
 Route::get('/bookings/{id?}/{tourid?}', array('as' => 'bookings', 'uses' => 'BookingsController@index'));
 Route::post('/bookings', array('as' => 'bookings.store', 'before' => 'csrf', 'uses' => 'BookingsController@store'));
 

@@ -71,28 +71,37 @@ class PagesController extends \BaseController {
 		return View::make('pages.privacy');
 	}
 
-	public function thankyou()
+	public function thankyou($payment_reference = null, $charge = null)
 	{
 
-		if(Input::get('payment_reference'))
+		$charge = Session::get('charge');
+		$payment_reference = Session::get('payment_reference');
+
+		if($payment_reference)
 		{
-			$booking = Booking::find(Input::get('payment_reference'));
-			$booking->receipt = Input::all();
+
+			$booking = Booking::find($payment_reference);
+			$booking->receipt = array(
+							'stripe_id' => $charge->id,
+							'payment_reference' => Session::get('payment_reference'),
+							'amount' => $charge->amount,
+							//'payment_date' => $charge->date
+						);
 			$booking->save();
 
 			Tour::where('dates.id', (int) $booking->tour_date)->decrement('dates.$.spaces');
 			$tour = Tour::find($booking->id);
 
-			Mail::send('emails.booking', compact('booking', 'tour'), function($message)
+			Mail::send('emails.stripebooking', compact('booking', 'tour'), function($message)
 			{
-			    $message->to('dale@bluewell.com.au', 'Not Normal Tours')->subject('New Booking at Not Normal Tours');
+			    $message->to('mick@5150studios.com.au', 'Not Normal Tours')->subject('New Booking at Not Normal Tours');
 			});
 
 			return View::make('pages.thankyou');
 			
 		}
 
-		return Redirect::to('/');
+		return View::make('pages.thankyou');
 		
 	}		
 
